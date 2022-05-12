@@ -1,19 +1,32 @@
 'use strict';
 
 {
-  const ta = document.querySelector('img');
+  const tas = document.querySelectorAll('img');
 
-  function callback() { 
-    console.log('fired!');
+  function callback(entries,obs) { 
+    console.log(entries);
+
+    entries.forEach(en => {
+      
+          if (!en.isIntersecting) {
+            return;
+          }
+      
+          en.target.classList.add('appear');
+          obs.unobserve(en.target);
+    });
   }
 
   const options = {
-    threshold: [0.2,0.8],
+    threshold: 0.2,
+    
   }
 
   const ss = new IntersectionObserver(callback,options);
 
-  ss.observe(ta);
+  tas.forEach(ta => {
+    ss.observe(ta);
+  })
 
 
 

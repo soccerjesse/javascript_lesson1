@@ -3,24 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>JavaScript Basics</title>
-  <style>
-    li {
-      cursor: pointer;
-    }
-    li.done {
-      text-decoration: line-through;
-    }
-  </style>
+  <link rel="stylesheet" href="css/lesson.css">
 </head>
 <body>
   
-  <ul> <!-- e.currentTarget -->
-    <li>Todo</li>
-    <li>Todo</li> <!-- e.target -->
-    <li>Todo</li>
-  </ul>
+  <div id="open">
+    詳細を見る
+  </div>
 
+  <div id="mask" class="hidden"></div>
 
+  <section id="modal" class="hidden">
+    <p>こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。</p>
+    <div id="close">
+      閉じる
+    </div>
+  </section>
   <script src="js/lesson.js"></script>
 </body>
 </html>

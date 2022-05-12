@@ -1,0 +1,10 @@
+img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s,transform .4s;
+}
+
+img.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
